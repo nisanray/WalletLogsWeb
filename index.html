@@ -1,38 +1,983 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WalletLogs - Take Control of Your Financial Future</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+	<link rel="icon" href="images/favicon1.png" type="image/png" />
 
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="/">
-
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
-
-  <!-- iOS meta tags & icons -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="walletlogsweb">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
-
-  <title>walletlogsweb</title>
-  <link rel="manifest" href="manifest.json">
 </head>
 <body>
-  <script src="flutter_bootstrap.js" async></script>
+<!-- Animated Background -->
+<canvas id="particleCanvas" class="particle-background"></canvas>
+
+<!-- Navigation Bar -->
+<nav id="navbar" class="navbar">
+    <div class="nav-container">
+        <!-- Logo -->
+        <div class="logo">
+            <div class="logo-icon">
+                <span class="material-icons">account_balance_wallet</span>
+            </div>
+            <span class="logo-text">WalletLogs</span>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="nav-menu desktop-menu">
+            <a href="#features" class="nav-item">Features</a>
+            <a href="#how-it-works" class="nav-item">How It Works</a>
+            <a href="#screenshots" class="nav-item">Screenshots</a>
+            <a href="#testimonials" class="nav-item">Testimonials</a>
+            <a href="#pricing" class="nav-item">Pricing</a>
+            <a href="#faqs" class="nav-item">FAQs</a>
+            <a href="#download" class="nav-item">Download</a>
+            <a href="#about-team" class="nav-item">About</a>
+            <a href="#contact" class="nav-item">Contact</a>
+<!--             <button class="get-started-btn" onclick="window.open('app.html', '_blank')">
+                <span class="material-icons">rocket_launch</span>
+                Get Started
+            </button> -->
+        	<button class="get-started-btn" onclick="window.location.href='app.html'">
+    		<span class="material-icons">rocket_launch</span>
+    		Get Started
+			</button>
+
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <span class="material-icons">menu</span>
+        </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#features" class="mobile-nav-item">Features</a>
+        <a href="#how-it-works" class="mobile-nav-item">How It Works</a>
+        <a href="#screenshots" class="mobile-nav-item">Screenshots</a>
+        <a href="#testimonials" class="mobile-nav-item">Testimonials</a>
+        <a href="#pricing" class="mobile-nav-item">Pricing</a>
+        <a href="#faqs" class="mobile-nav-item">FAQs</a>
+        <a href="#download" class="mobile-nav-item">Download</a>
+        <a href="#about-team" class="mobile-nav-item">About</a>
+        <a href="#contact" class="mobile-nav-item">Contact</a>
+        <button class="mobile-get-started-btn" onclick="window.open('app.html', '_blank')">
+            <span class="material-icons">rocket_launch</span>
+            Get Started
+        </button>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <!-- Floating Shapes -->
+        <div class="floating-shapes">
+            <div class="floating-circle"></div>
+            <div class="floating-triangle"></div>
+            <div class="floating-rectangle"></div>
+        </div>
+
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <!-- Animated Badge -->
+                    <div class="hero-badge">
+                        <span class="material-icons">star</span>
+                        #1 Finance App 2024
+                    </div>
+
+                    <!-- Main Headline -->
+                    <h1 class="hero-title">
+                        Take Control of Your<br>
+                        <span class="gradient-text">Financial Future</span>
+                    </h1>
+
+                    <!-- Subtitle -->
+                    <p class="hero-subtitle">
+                        Smart expense tracking, budget management, and financial insights all in one beautiful app.
+                        Join 15,000+ users who are already managing their money better.
+                    </p>
+
+                    <!-- Trust Indicators -->
+                    <div class="trust-indicators">
+                        <div class="trust-item">
+                            <span class="material-icons">people</span>
+                            <span class="trust-number">15K+</span>
+                            <span class="trust-label">Active Users</span>
+                        </div>
+                        <div class="trust-item">
+                            <span class="material-icons">receipt</span>
+                            <span class="trust-number">50K+</span>
+                            <span class="trust-label">Transactions</span>
+                        </div>
+                        <div class="trust-item">
+                            <span class="material-icons">trending_up</span>
+                            <span class="trust-number">$2.5M+</span>
+                            <span class="trust-label">Managed</span>
+                        </div>
+                    </div>
+
+                    <!-- Hero Buttons -->
+                    <div class="hero-buttons">
+                        <button class="btn-primary hero-btn" onclick="window.open('app.html', '_blank')">
+                            <span class="material-icons">rocket_launch</span>
+                            Get Started Free
+                        </button>
+                        <button class="btn-secondary hero-btn" onclick="scrollToSection('features')">
+                            <span class="material-icons">play_arrow</span>
+                            Watch Demo
+                        </button>
+                    </div>
+                </div>
+
+                <div class="hero-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-content">
+                            <!-- Balance Card -->
+                            <div class="balance-card">
+                                <div class="balance-header">Total Balance</div>
+                                <div class="balance-amount">$12,450.00</div>
+                                <div class="balance-change">
+                                    <span class="material-icons">trending_up</span>
+                                    +2.5% from last month
+                                </div>
+                            </div>
+
+                            <!-- Quick Actions -->
+                            <div class="quick-actions">
+                                <div class="quick-action income">
+                                    <span class="material-icons">add</span>
+                                    <span>Add Income</span>
+                                </div>
+                                <div class="quick-action expense">
+                                    <span class="material-icons">remove</span>
+                                    <span>Add Expense</span>
+                                </div>
+                            </div>
+
+                            <!-- Recent Transactions -->
+                            <div class="transactions-header">Recent Transactions</div>
+                            <div class="transactions-list">
+                                <div class="transaction-item">
+                                    <div class="transaction-icon grocery">
+                                        <span class="material-icons">shopping_cart</span>
+                                    </div>
+                                    <div class="transaction-details">
+                                        <div class="transaction-title">Grocery Store</div>
+                                        <div class="transaction-date">Today, 2:30 PM</div>
+                                    </div>
+                                    <div class="transaction-amount expense">-$85.20</div>
+                                </div>
+                                <div class="transaction-item">
+                                    <div class="transaction-icon salary">
+                                        <span class="material-icons">account_balance</span>
+                                    </div>
+                                    <div class="transaction-details">
+                                        <div class="transaction-title">Salary Deposit</div>
+                                        <div class="transaction-date">Yesterday</div>
+                                    </div>
+                                    <div class="transaction-amount income">+$2,800.00</div>
+                                </div>
+                                <div class="transaction-item">
+                                    <div class="transaction-icon coffee">
+                                        <span class="material-icons">local_cafe</span>
+                                    </div>
+                                    <div class="transaction-details">
+                                        <div class="transaction-title">Coffee & Snacks</div>
+                                        <div class="transaction-date">2 days ago</div>
+                                    </div>
+                                    <div class="transaction-amount expense">-$24.50</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating UI Elements -->
+                    <div class="floating-notification">
+                        <span class="material-icons">notifications</span>
+                        <span>Budget saved!</span>
+                    </div>
+                    <div class="floating-chart">
+                        <span class="material-icons">bar_chart</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="section-divider"></div>
+    <!-- Stats Section -->
+    <section id="stats" class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <span class="material-icons">people_outline</span>
+                    </div>
+                    <div class="stat-number" data-target="15000">0</div>
+                    <div class="stat-suffix">+</div>
+                    <div class="stat-label">Active Users</div>
+                    <div class="stat-description">Trust our platform</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <span class="material-icons">receipt_long</span>
+                    </div>
+                    <div class="stat-number" data-target="50000">0</div>
+                    <div class="stat-suffix">+</div>
+                    <div class="stat-label">Transactions</div>
+                    <div class="stat-description">Successfully tracked</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <span class="material-icons">trending_up</span>
+                    </div>
+                    <div class="stat-prefix">$</div>
+                    <div class="stat-number" data-target="25">0</div>
+                    <div class="stat-suffix">M+</div>
+                    <div class="stat-label">Money Managed</div>
+                    <div class="stat-description">Under management</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="section-divider"></div>
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Everything You Need</h2>
+                <p>Powerful features to take complete control of your finances</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="material-icons">track_changes</span>
+                    </div>
+                    <h3>Smart Expense Tracking</h3>
+                    <p>Automatically categorize and track your expenses with AI-powered insights and real-time notifications.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="material-icons">account_balance</span>
+                    </div>
+                    <h3>Balance Management</h3>
+                    <p>Monitor your account balances across multiple banks and cards with real-time synchronization.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="material-icons">pie_chart</span>
+                    </div>
+                    <h3>Budget Planning</h3>
+                    <p>Create personalized budgets with smart recommendations and get alerts before overspending.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="material-icons">savings</span>
+                    </div>
+                    <h3>Savings Goals</h3>
+                    <p>Set and track multiple savings goals with visual progress indicators and milestone celebrations.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="material-icons">analytics</span>
+                    </div>
+                    <h3>Advanced Analytics</h3>
+                    <p>Beautiful charts and detailed reports to understand your spending patterns and financial health.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="material-icons">security</span>
+                    </div>
+                    <h3>Bank-Level Security</h3>
+                    <p>Your data is protected with 256-bit encryption and multi-factor authentication.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="section-divider"></div>
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Get started in just 4 simple steps</p>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <span class="material-icons">person_add</span>
+                    </div>
+                    <h3>Sign Up</h3>
+                    <p>Create your free account in less than 2 minutes with email or social login</p>
+                </div>
+
+                <div class="step-connector"></div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <span class="material-icons">link</span>
+                    </div>
+                    <h3>Connect Accounts</h3>
+                    <p>Securely link your bank accounts and cards for automatic transaction import</p>
+                </div>
+
+                <div class="step-connector"></div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <span class="material-icons">flag</span>
+                    </div>
+                    <h3>Set Goals</h3>
+                    <p>Define your financial goals and budgets with our smart recommendation engine</p>
+                </div>
+
+                <div class="step-connector"></div>
+
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">
+                        <span class="material-icons">emoji_events</span>
+                    </div>
+                    <h3>Track & Achieve</h3>
+                    <p>Monitor your progress with beautiful insights and achieve your financial dreams</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="section-divider"></div>
+    <!-- Screenshots Section -->
+    <section id="screenshots" class="screenshots-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>See It In Action</h2>
+                <p>Beautiful interface designed for maximum usability</p>
+            </div>
+
+            <div class="screenshots-carousel">
+                <!-- Carousel items only, no arrow buttons -->
+                <div class="screenshot-item active">
+                    <img src="images/dashboard.png" alt="Dashboard Screenshot">
+                    <div class="screenshot-caption">Dashboard Overview</div>
+                </div>
+                <div class="screenshot-item">
+                    <img src="images/profile.png" alt="Transactions Screenshot">
+                    <div class="screenshot-caption">Transaction History</div>
+                </div>
+                <div class="screenshot-item">
+                    <img src="images/Reports.png" alt="Reports Screenshot">
+                    <div class="screenshot-caption">Reports</div>
+                </div>
+                <div class="screenshot-item">
+                    <img src="images/profile.png" alt="Profile Screenshot">
+                    <div class="screenshot-caption">Profile</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="section-divider"></div>
+    <!-- Feature Videos Section -->
+    <section id="feature-videos" class="section-videos">
+        <div class="section-header">
+            <h2>Feature Videos</h2>
+            <p>See each feature in action</p>
+        </div>
+        <div class="videos-grid">
+            <div class="video-item">
+                <video src="videos/Dashboard.mp4" autoplay muted loop playsinline></video>
+                <h3>Dashboard</h3>
+            </div>
+            <div class="video-item">
+                <video src="videos/transactions.mp4" autoplay muted loop playsinline></video>
+                <h3>Transactions</h3>
+            </div>
+            <div class="video-item">
+                <video src="videos/Reports.mp4" autoplay muted loop playsinline></video>
+                <h3>Reports</h3>
+            </div>
+            <div class="video-item">
+                <video src="videos/Profile.mp4" autoplay muted loop playsinline></video>
+                <h3>Profile</h3>
+            </div>
+        </div>
+    </section>
+    <div class="section-divider"></div>
+    <!-- Download Section -->
+    <section id="download" class="download-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Download WalletLogs</h2>
+                <p>Get started today and take control of your finances</p>
+            </div>
+
+            <div class="download-buttons">
+                <a href="#" class="download-btn">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play">
+                </a>
+                <a href="#" class="download-btn">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on the App Store">
+                </a>
+
+            </div>
+            <div style="display: flex; justify-content: center; margin-top: 24px;">
+                <a href="app.html" class="download-btn btn-primary" target="_blank">
+                    <span class="material-icons">language</span>
+                    Try Web Version
+                </a>
+            </div>
+        </div>
+    </section>
+    <div class="section-divider"></div>
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Choose Your Plan</h2>
+                <p>Start free and upgrade as you grow</p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Free</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">0</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p>Perfect for getting started</p>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature">
+                            <span class="material-icons">check</span>
+                            Up to 100 transactions/month
+                        </div>
+                        <div class="feature">
+                            <span class="material-icons">check</span>
+                            Basic expense tracking
+                        </div>
+                        <div class="feature">
+                            <span class="material-icons">check</span>
+                            1 bank account connection
+                        </div>
+                        <div class="feature">
+                            <span class="material-icons">check</span>
+                            Mobile app access
+                        </div>
+                    </div>
+                    <button class="btn-secondary full-width">Get Started</button>
+                </div>
+
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Pro</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">9</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p>For serious budgeters</p>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature">
+                            <span class="material-icons">check</span>
+                            Unlimited transactions
+                        </div>
+                        <div class="feature">
+                            <span class="material-icons">check</span>
+                            Advanced analytics
+                        </div>
+                        <div class="feature">
+                            <span class="material-icons">check</span>
+                            Multiple bank accounts
+                        </div>
+                        <div class="feature">
+                            <span class="material-icons">check</span>
+                            Custom categories
+                        </div>
+                        <div class="feature">
+                            <span class="material-icons">check</span>
+                            Priority support
+                        </div>
+                    </div>
+                    <button class="btn-primary full-width">Start Free Trial</button>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Business</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">29</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p>For teams and businesses</p>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature">
+                            <span class="material-icons">check</span>
+                            Everything in Pro
+                        </div>
+                        <div class="feature">
+                            <span class="material-icons">check</span>
+                            Team collaboration
+                        </div>
+                        <div class="feature">
+                            <span class="material-icons">check</span>
+                            Advanced reporting
+                        </div>
+                        <div class="feature">
+                            <span class="material-icons">check</span>
+                            API access
+                        </div>
+                        <div class="feature">
+                            <span class="material-icons">check</span>
+                            Dedicated support
+                        </div>
+                    </div>
+                    <button class="btn-secondary full-width">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="section-divider"></div>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Users Say</h2>
+                <p>Join thousands of satisfied users who transformed their financial lives</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                    </div>
+                    <p>"WalletLogs completely changed how I manage my money. The insights are incredible and helped me save $2000 in just 3 months!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/50x50/6366F1/FFFFFF?text=SM" alt="Sarah Mitchell">
+                        <div>
+                            <div class="author-name">Sarah Mitchell</div>
+                            <div class="author-title">Marketing Manager</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card featured">
+                    <div class="testimonial-rating">
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                    </div>
+                    <p>"As a small business owner, tracking expenses was a nightmare. WalletLogs made it simple and automated. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/50x50/8B5CF6/FFFFFF?text=DJ" alt="David Johnson">
+                        <div>
+                            <div class="author-name">David Johnson</div>
+                            <div class="author-title">Business Owner</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                    </div>
+                    <p>"The budget planning feature is amazing. I finally understand where my money goes and can plan for my future goals."</p>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/50x50/06B6D4/FFFFFF?text=EC" alt="Emily Chen">
+                        <div>
+                            <div class="author-name">Emily Chen</div>
+                            <div class="author-title">Software Developer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="section-divider"></div>
+    <!-- FAQs Section -->
+    <section id="faqs" class="faqs-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about WalletLogs</p>
+            </div>
+
+            <div class="faqs-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is my financial data secure?</span>
+                        <span class="material-icons">expand_more</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We use bank-level 256-bit encryption and never store your banking credentials. All data is encrypted in transit and at rest, and we comply with all major financial data protection standards.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I connect multiple bank accounts?</span>
+                        <span class="material-icons">expand_more</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! With our Pro and Business plans, you can connect unlimited bank accounts, credit cards, and financial institutions to get a complete view of your finances.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is there a free trial?</span>
+                        <span class="material-icons">expand_more</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We offer a 14-day free trial of our Pro plan. No credit card required. You can cancel anytime during the trial period.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I export my data?</span>
+                        <span class="material-icons">expand_more</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! You can export all your transaction data, reports, and insights in multiple formats including CSV, PDF, and Excel at any time.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you offer customer support?</span>
+                        <span class="material-icons">expand_more</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We provide email support for all users, priority support for Pro users, and dedicated support for Business customers. Our support team typically responds within 24 hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="section-divider"></div>
+    <!-- About Team Section -->
+    <section id="about-team" class="about-team-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Meet Our Team</h2>
+                <p>Passionate experts dedicated to revolutionizing personal finance</p>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="images/nisan.jpg" alt="Nisan Roy">
+                    <h3>Nisan Roy</h3>
+                    <p class="role">CEO & Founder</p>
+                    <p class="bio">Former fintech executive with 10+ years of experience in financial technology and product development.</p>
+                    <div class="social-links">
+                        <a href="#"><span class="material-icons">link</span></a>
+                        <a href="#"><span class="material-icons">alternate_email</span></a>
+                    </div>
+                </div>
+
+<!--                <div class="team-member">-->
+<!--                    <img src="https://via.placeholder.com/200x200/8B5CF6/FFFFFF?text=SJ" alt="Sarah Johnson">-->
+<!--                    <h3>Sarah Johnson</h3>-->
+<!--                    <p class="role">CTO</p>-->
+<!--                    <p class="bio">Lead engineer with expertise in mobile app development, security, and scalable financial systems.</p>-->
+<!--                    <div class="social-links">-->
+<!--                        <a href="#"><span class="material-icons">link</span></a>-->
+<!--                        <a href="#"><span class="material-icons">alternate_email</span></a>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="team-member">-->
+<!--                    <img src="https://via.placeholder.com/200x200/06B6D4/FFFFFF?text=MB" alt="Mike Brown">-->
+<!--                    <h3>Mike Brown</h3>-->
+<!--                    <p class="role">Head of Design</p>-->
+<!--                    <p class="bio">UX/UI designer focused on creating intuitive and beautiful financial management experiences.</p>-->
+<!--                    <div class="social-links">-->
+<!--                        <a href="#"><span class="material-icons">link</span></a>-->
+<!--                        <a href="#"><span class="material-icons">alternate_email</span></a>-->
+<!--                    </div>-->
+<!--                </div>-->
+            </div>
+        </div>
+    </section>
+    <div class="section-divider"></div>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <p>Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-form">
+                    <h3>Send us a message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" placeholder="Your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Subject</label>
+                            <input type="text" placeholder="What's this about?" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea placeholder="Tell us more..." rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary full-width">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <span class="material-icons">email</span>
+                        </div>
+                        <div class="contact-details">
+                            <div class="contact-title">Email</div>
+                            <div class="contact-text">support@walletlogs.com</div>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <span class="material-icons">phone</span>
+                        </div>
+                        <div class="contact-details">
+                            <div class="contact-title">Phone</div>
+                            <div class="contact-text">+8801831126629</div>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <span class="material-icons">location_on</span>
+                        </div>
+                        <div class="contact-details">
+                            <div class="contact-title">Address</div>
+                            <div class="contact-text">Patuakhali, 8602</div>
+                        </div>
+                    </div>
+
+                    <div class="social-section">
+                        <h4>Follow Us</h4>
+                        <div class="social-buttons">
+                            <button class="social-btn">
+                                <span class="material-icons">facebook</span>
+                            </button>
+                            <button class="social-btn">
+                                <span class="material-icons">alternate_email</span>
+                            </button>
+                            <button class="social-btn">
+                                <span class="material-icons">link</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="section-divider"></div>
+    <!-- Auth Section -->
+    <!--
+    <section id="auth" class="auth-section">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-tabs">
+                    <button class="auth-tab active" data-tab="login">Login</button>
+                    <button class="auth-tab" data-tab="register">Sign Up</button>
+                </div>
+                <div class="auth-content">
+                    <div class="auth-form" id="loginForm">
+                        <h3>Welcome Back</h3>
+                        <p>Sign in to your account to continue</p>
+
+                        <form>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" placeholder="your@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input type="password" placeholder="Your password" required>
+                            </div>
+                            <div class="form-options">
+                                <label class="checkbox">
+                                    <input type="checkbox">
+                                    <span>Remember me</span>
+                                </label>
+                                <a href="#" class="forgot-password">Forgot password?</a>
+                            </div>
+                            <button type="submit" class="btn-primary full-width">Sign In</button>
+                        </form>
+
+                        <div class="social-login">
+                            <div class="divider">or continue with</div>
+                            <div class="social-buttons">
+                                <button class="social-btn google">
+                                    <span class="material-icons">account_circle</span>
+                                    Google
+                                </button>
+                                <button class="social-btn facebook">
+                                    <span class="material-icons">facebook</span>
+                                    Facebook
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="auth-form" id="registerForm" style="display: none;">
+                        <h3>Create Account</h3>
+                        <p>Join thousands of users managing their finances better</p>
+
+                        <form>
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <input type="text" placeholder="Your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" placeholder="your@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input type="password" placeholder="Create a strong password" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Confirm Password</label>
+                                <input type="password" placeholder="Confirm your password" required>
+                            </div>
+                            <div class="form-options">
+                                <label class="checkbox">
+                                    <input type="checkbox" required>
+                                    <span>I agree to the <a href="#">Terms & Conditions</a></span>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn-primary full-width">Create Account</button>
+                        </form>
+
+                        <div class="social-login">
+                            <div class="divider">or continue with</div>
+                            <div class="social-buttons">
+                                <button class="social-btn google">
+                                    <span class="material-icons">account_circle</span>
+                                    Google
+                                </button>
+                                <button class="social-btn facebook">
+                                    <span class="material-icons">facebook</span>
+                                    Facebook
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    -->
+    <div class="section-divider"></div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <span class="material-icons">account_balance_wallet</span>
+                        </div>
+                        <span class="logo-text">WalletLogs</span>
+                    </div>
+                    <p>Take control of your financial future with smart expense tracking and budget management.</p>
+                    <div class="footer-social">
+                        <a href="#"><span class="material-icons">facebook</span></a>
+                        <a href="#"><span class="material-icons">alternate_email</span></a>
+                        <a href="#"><span class="material-icons">link</span></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#download">Download</a></li>
+                        <li><a href="#faqs">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about-team">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 WalletLogs. All rights reserved.</p>
+                <p>Made with ❤️ for better financial management</p>
+            </div>
+        </div>
+    </footer>
+</main>
+
+<!-- Floating Action Button -->
+<button class="floating-action-btn" id="scrollToTopBtn">
+    <span class="material-icons">keyboard_arrow_up</span>
+</button>
+
+<script src="script.js"></script>
 </body>
 </html>
