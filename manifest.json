@@ -1,6 +1,6 @@
 {
-    "name": "walletlogsweb",
-    "short_name": "walletlogsweb",
+    "name": "feature_admin",
+    "short_name": "feature_admin",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
